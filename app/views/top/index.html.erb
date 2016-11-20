@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Achieve</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="normalize.css">
+    </head>
+    <body>
+        <% if flash[:notice] %>
+            <div class="alert alert-success">
+                <%= flash[:notice] %>
+            </div>
+        <% end %>
+        <section class="main-header">
+            <p class="flash"><%= notice %><%= alert %></p>
+            <img src="<%= asset_path "instagram_main.jpg" %>">
+        </section>
+        <footer>
+            <p>運営会社yhayashi30株式会社</p>
+            <p>© 2015-2016 Copyright yhayashi30 Corp.</p>
+        </footer>
+    </body>
+</html>
