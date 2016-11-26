@@ -9,29 +9,29 @@ header {
     padding: 5px 25px;
 }
 .navbar {
-    background-color: transparent;
-    color: white;
+    background-color: white;
+    color: black;
     margin-bottom: 0px;
 }
 .navbar-default {
   .navbar-brand {
-    color: #ccc;
+    color: black;
     &:hover {
-      color: white;
+      color: gray;
     }
   }
   .navbar-nav > li > a {
-    color: #ccc;
+    color: black;
     &:hover, &:focus {
-      color: white;
+      color: gray;
     }
   }
   .navbar-nav > .open > a {
-    background-color: transparent;
-    color: white;
+    background-color: white;
+    color: black;
     &:hover, &:focus {
-      background-color: transparent;
-      color: white;
+      background-color: white;
+      color: gray;
     }
   }
 }
@@ -40,13 +40,13 @@ header {
     color: #ccc;
     text-align: center;
     &:hover, &:focus {
-      color: white;
+      color: black;
     }
   }
   .navbar-default .navbar-toggle {
-    background-color: transparent;
+    background-color: white;
     &:hover, &:focus {
-      background-color: transparent;
+      background-color: white;
     }
   }
 }
