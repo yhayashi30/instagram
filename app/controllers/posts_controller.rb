@@ -8,18 +8,18 @@ class PostsController < ApplicationController
   
   def new
     if params[:back]
-      @post = Post.new(blogs_params)
+      @post = Post.new(posts_params)
     else
       @post = Post.new
     end
   end
 
   def create
-    @post = Post.new(blogs_params)
+    @post = Post.new(posts_params)
     @post.user_id = current_user.id
     if @post.save
       redirect_to posts_path, notice:"投稿しました！"
-      NoticeMailer.sendmail_blog(@post).deliver
+      NoticeMailer.sendmail_post(@post).deliver
     else
       render action: 'new'
     end
@@ -46,7 +46,7 @@ class PostsController < ApplicationController
 
   private
     def posts_params
-      params.require(:post).permit(:title, :content)
+      params.require(:post).permit(:title, :content, :picture)
     end
 
     def set_post
